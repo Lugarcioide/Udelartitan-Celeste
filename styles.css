@@ -33,7 +33,6 @@ nav {
     width: 11em;
 }
 
-/* Oculta el cursor cuando se activa el cepillo */
 .hide-cursor {
     cursor: none !important;
 }
@@ -50,8 +49,6 @@ nav {
     width: 80%;
     margin: 0 auto;
     padding: 4em 0;
-    /* 
-    cursor: pointer; */
 }
 
 #brush {
@@ -60,9 +57,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 80px;
-    /* altura fija */
     width: auto;
-    /* mantiene la proporción */
     pointer-events: none;
     z-index: 10;
     transition: transform 0.1s ease-out;
@@ -447,7 +442,6 @@ span {
         width: 80%;
         margin: 0 auto;
         padding: 4em 0;
-        /* cursor: pointer; */
     }
 
     #sec2 {
@@ -595,8 +589,6 @@ span {
     #subNav img {
         width: 10%;
     }
-
-
 }
 
 /** DESKTOP */
@@ -605,7 +597,6 @@ span {
         height: 50vh;
         margin: 0 auto;
         padding: 4em 0;
-        /* cursor: pointer; */
     }
 
     #sec2 h2 {

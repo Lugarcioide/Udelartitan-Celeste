@@ -1,8 +1,8 @@
 // Seleccionamos la imagen dentro de #sec1
-const doodleImg = document.querySelector("#sec1 img");
+let doodleImg = document.querySelector("#sec1 img");
 
 // Lista de imágenes del carrusel
-const imagenes = [
+let imagenes = [
     "img/doodle1.svg",
     "img/doodle2.svg",
     "img/doodle3.svg",
@@ -25,10 +25,10 @@ doodleImg.addEventListener("click", () => {
     }, 300); // coincide con la duración del fade
 });
 
-const doodle = document.getElementById("doodle");
-const brush = document.getElementById("brush");
+let doodle = document.querySelector("#doodle");
+let brush = document.querySelector("#brush");
 
-const brushFrames = ["img/brush1.png", "img/brush2.png"];
+let brushFrames = ["img/brush1.png", "img/brush2.png"];
 let frame = 0;
 let animInterval = null;
 
