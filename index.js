@@ -1,8 +1,6 @@
-// Seleccionamos la imagen dentro de #sec1
 let doodleImg = document.querySelector("#sec1 img");
 
-// Lista de imágenes del carrusel
-let imagenes = [
+let images = [
     "img/doodle1.svg",
     "img/doodle2.svg",
     "img/doodle3.svg",
@@ -11,18 +9,17 @@ let imagenes = [
     "img/doodle6.svg"
 ];
 
-let indice = 0;
+let index = 0;
 
-// Cuando se hace clic sobre la imagen, cambiar a la siguiente
+//* Cambia imagen al hacer click
 doodleImg.addEventListener("click", () => {
-    indice = (indice + 1) % imagenes.length; // bucle infinito
+    index = (index + 1) % images.length;
     doodleImg.classList.add("fade");
 
-    // Espera que termine la transición y cambia la imagen
     setTimeout(() => {
-        doodleImg.src = imagenes[indice];
+        doodleImg.src = images[index];
         doodleImg.classList.remove("fade");
-    }, 300); // coincide con la duración del fade
+    }, 300);
 });
 
 let doodle = document.querySelector("#doodle");
@@ -32,10 +29,10 @@ let brushFrames = ["img/brush1.png", "img/brush2.png"];
 let frame = 0;
 let animInterval = null;
 
-// Mostrar el cepillo y ocultar el cursor
+//* Mostrar el cepillo y ocultar el cursor
 doodle.addEventListener("mouseenter", () => {
     brush.style.display = "block";
-    document.body.classList.add("hide-cursor"); // 🔹 oculta el cursor
+    document.body.classList.add("hide-cursor");
 
     brush.src = brushFrames[0];
     animInterval = setInterval(() => {
@@ -44,15 +41,15 @@ doodle.addEventListener("mouseenter", () => {
     }, 150);
 });
 
-// Mover el cepillo con el mouse
+//* Mover el cepillo con el mouse
 doodle.addEventListener("mousemove", (e) => {
     brush.style.left = `${e.pageX}px`;
     brush.style.top = `${e.pageY}px`;
 });
 
-// Detener la animación y volver a mostrar el cursor
+//* Detener la animación y volver a mostrar el cursor
 doodle.addEventListener("mouseleave", () => {
     clearInterval(animInterval);
     brush.style.display = "none";
-    document.body.classList.remove("hide-cursor"); // 🔹 vuelve a mostrar el cursor
+    document.body.classList.remove("hide-cursor");
 });
