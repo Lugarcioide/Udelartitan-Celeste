@@ -13,9 +13,9 @@
     --gray: #5f6368;
     --bg: #fff;
     --surface: #202124;
-    --accent1: #fd910d;
-    --accent2: #fcdba6;
-    --accent3: #eeb96c;
+    --accent1: #0066ff;
+    --accent2: #bbdcff;
+    --accent3: #012676;
 }
 
 header {
@@ -42,27 +42,13 @@ nav {
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 #sec1 img {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    padding: 4em 0;
+    padding: 2em 0;
 }
-
-#brush {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 80px;
-    width: auto;
-    pointer-events: none;
-    z-index: 10;
-    transition: transform 0.1s ease-out;
-}
-
 
 #sec2 {
     background-color: var(--accent2);
@@ -185,7 +171,7 @@ span {
     position: absolute;
     width: .6em;
     height: .6em;
-    background-color: #fd910d;
+    background-color: var(--accent1);
     border-radius: 50%;
     top: 85%;
     left: 30%;
@@ -213,76 +199,6 @@ span {
 }
 
 .circulo1:hover .tooltip1 {
-    opacity: 1;
-}
-
-.circulo2 {
-    position: absolute;
-    width: .6em;
-    height: .6em;
-    background-color: #fd910d;
-    border-radius: 50%;
-    top: 85%;
-    left: 27%;
-}
-
-.circulo2:hover {
-    border: 2px solid gray;
-}
-
-.tooltip2 {
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--bg);
-    color: var(--surface);
-    padding: .4em .6em;
-    border-radius: .4em;
-    font-size: .9em;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    z-index: 1;
-}
-
-.circulo2:hover .tooltip2 {
-    opacity: 1;
-}
-
-.circulo3 {
-    position: absolute;
-    width: .6em;
-    height: .6em;
-    background-color: #fd910d;
-    border-radius: 50%;
-    top: 73%;
-    left: 32%;
-}
-
-.circulo3:hover {
-    border: 2px solid gray;
-}
-
-.tooltip3 {
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--bg);
-    color: var(--surface);
-    padding: .4em .6em;
-    border-radius: .4em;
-    font-size: .9em;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    z-index: 1;
-}
-
-.circulo3:hover .tooltip3 {
     opacity: 1;
 }
 
@@ -434,14 +350,10 @@ span {
         border-radius: 5px;
     }
 
-    #sec1 {
-        position: relative;
-    }
-
     #sec1 img#doodle {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
-        padding: 4em 0;
+        padding: 2em 0;
     }
 
     #sec2 {
@@ -594,9 +506,8 @@ span {
 /** DESKTOP */
 @media all and (min-width:1200px) {
     #sec1 img {
-        height: 50vh;
+        width: 50% !important;
         margin: 0 auto;
-        padding: 4em 0;
     }
 
     #sec2 h2 {
@@ -637,14 +548,15 @@ span {
     #side1 {
         width: 41%;
         background-color: var(--accent3);
-        display: flex;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         border: 1px solid black;
     }
 
     #side1 img {
-        width: 50%;
+        width: 70%;
+        height: 100%;
+        object-fit: contain;
         margin: 0 auto;
     }
 
@@ -707,7 +619,7 @@ span {
         position: absolute;
         width: .9em;
         height: .9em;
-        background-color: #fd910d;
+        background-color: var(--accent1);
         border-radius: 50%;
         top: 85%;
         left: 30%;
@@ -735,76 +647,6 @@ span {
     }
 
     .circulo1:hover .tooltip1 {
-        opacity: 1;
-    }
-
-    .circulo2 {
-        position: absolute;
-        width: .9em;
-        height: .9em;
-        background-color: #fd910d;
-        border-radius: 50%;
-        top: 85%;
-        left: 27%;
-    }
-
-    .circulo2:hover {
-        border: 2px solid gray;
-    }
-
-    .tooltip2 {
-        position: absolute;
-        bottom: 120%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--bg);
-        color: var(--surface);
-        padding: .4em .6em;
-        border-radius: .4em;
-        font-size: .9em;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease;
-        z-index: 1;
-    }
-
-    .circulo2:hover .tooltip2 {
-        opacity: 1;
-    }
-
-    .circulo3 {
-        position: absolute;
-        width: .9em;
-        height: .9em;
-        background-color: #fd910d;
-        border-radius: 50%;
-        top: 73%;
-        left: 32%;
-    }
-
-    .circulo3:hover {
-        border: 2px solid gray;
-    }
-
-    .tooltip3 {
-        position: absolute;
-        bottom: 120%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--bg);
-        color: var(--surface);
-        padding: .4em .6em;
-        border-radius: .4em;
-        font-size: .9em;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease;
-        z-index: 1;
-    }
-
-    .circulo3:hover .tooltip3 {
         opacity: 1;
     }
 
